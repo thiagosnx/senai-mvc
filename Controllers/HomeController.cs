@@ -15,6 +15,15 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Cliente cliente = new Cliente(01, "thiago", "123","email", "pet");
+        List<Cliente> clientes = new List<Cliente>();
+        clientes.Add(cliente);
+        ViewBag.clientes = clientes;
+
+        Fornecedor fornecedor = new Fornecedor(01, "nome", "cnpj", "mail");
+        List<Fornecedor> fornecedores = new List<Fornecedor>();
+        fornecedores.Add(fornecedor);
+        ViewBag.fornecedores = fornecedores;
         return View();
     }
 
